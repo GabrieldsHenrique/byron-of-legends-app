@@ -10,4 +10,12 @@ export const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full',
   },
+  {
+    path: 'login',
+    loadComponent: () => import('./externo/login/login.page').then( m => m.LoginPage)
+  },
+  {
+    path: 'cadastrar',
+    loadComponent: () => import('./externo/cadastrar/cadastrar.page').then( m => m.CadastrarPage)
+  },
 ];
